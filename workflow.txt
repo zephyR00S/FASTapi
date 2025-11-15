@@ -40,3 +40,11 @@ DELETE /books/{id} → delete a book
 
 11. File Storage (persistent books.json). Modify POST, PUT, DELETE to call save_books()
 
+12. We’ll now build a Books API with a real database, using:
+
+        ✅ SQLite (simple file-based DB)
+        ✅ SQLAlchemy ORM (most popular ORM in Python)
+        ✅ Pydantic models
+        ✅ CRUD operations (Create, Read, Update, Delete)
+
+13. Client → main.py → crud.py → models.py → database.py → SQLite DB
