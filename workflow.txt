@@ -1,0 +1,42 @@
+1. We will build:
+
+GET /books → get all books
+GET /books/{id} → get one book
+POST /books → add a book
+PUT /books/{id} → update a book
+DELETE /books/{id} → delete a book
+
+
+2. Write the Books API code
+3. Connect the router in main.py
+4. Run the server -> uvicorn main:app --reload
+
+
+5. Update models (add validation + remove manual id)
+    Validates:
+
+        title ≥ 3 chars
+
+        author ≥ 2 chars
+
+        price > 0
+
+        no id needed from user (we generate it)
+
+6. Auto-Generate IDs
+7. Modify your POST route: Users don’t send IDs, IDs increase automatically.
+8. Search + Filtering 
+    /books/search?title=python
+    /books/search?author=James
+    /books/search?min_price=10&max_price=30
+
+9. Sorting 
+    /books/sort?by=price&order=asc
+    /books/sort?by=title&order=desc
+
+10. Pagination
+    /books/page?page=1&limit=3
+    /books/page?page=2&limit=3
+
+11. File Storage (persistent books.json). Modify POST, PUT, DELETE to call save_books()
+
